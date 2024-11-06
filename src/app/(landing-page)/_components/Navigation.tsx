@@ -33,8 +33,12 @@ export default function Navigation({
         </div>
         <div className="flex items-center sm:hidden">{children}</div>
         <div className="hidden sm:block sm:space-x-3">
-          <Button variant={"outline"}>Create Account</Button>
-          <Button>Sign in</Button>
+          <Link href={"/sign-up"}>
+            <Button variant={"outline"}>Create Account</Button>
+          </Link>
+          <Link href={"/sign-in"}>
+            <Button>Sign in</Button>
+          </Link>
         </div>
       </nav>
     </header>
