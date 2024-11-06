@@ -21,16 +21,18 @@ export default function Navigation({
             <ul className="flex items-center gap-6 text-sm text-muted-foreground font-semibold">
               {nav.map((item) => {
                 return (
-                  <li>
-                    <Link href={"/"}>{item}</Link>
+                  <li key={item}>
+                    <Link href={"/"} className="hover:text-primary">
+                      {item}
+                    </Link>
                   </li>
                 );
               })}
             </ul>
           </div>
         </div>
-        <div className="flex items-center md:hidden">{children}</div>
-        <div className="hidden md:block md:space-x-3">
+        <div className="flex items-center sm:hidden">{children}</div>
+        <div className="hidden sm:block sm:space-x-3">
           <Button variant={"outline"}>Create Account</Button>
           <Button>Sign in</Button>
         </div>
