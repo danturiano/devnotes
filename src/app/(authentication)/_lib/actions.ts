@@ -2,7 +2,7 @@
 
 import { saltAndHashPassword } from "@/lib/utils";
 import { createUser, getUser } from "@/services/data-service";
-import { signIn } from "./auth";
+import { signIn, signOut } from "./auth";
 import { CredentialsSchema } from "./types";
 
 export async function signInWithGoogle() {
@@ -11,6 +11,10 @@ export async function signInWithGoogle() {
 
 export async function signInWithGithub() {
   await signIn("github", { redirectTo: "/dashboard" });
+}
+
+export async function logout() {
+  await signOut({ redirectTo: "/" });
 }
 
 export async function signInWithCredentials(User: unknown) {
