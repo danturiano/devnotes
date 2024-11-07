@@ -22,6 +22,7 @@ import {
 import { CredentialsSchema } from "../_lib/types";
 import { Button } from "@/components/Button";
 import Link from "next/link";
+import SpinnerMini from "@/components/SpinnerMini";
 
 export default function CredentialsForm() {
   const [isPending, startTransition] = useTransition();
@@ -124,7 +125,7 @@ export default function CredentialsForm() {
               "Create Account"
             )
           ) : (
-            <div></div>
+            <SpinnerMini />
           )}
         </Button>
       </form>
