@@ -15,7 +15,7 @@ export default function Authentication({
 
   return (
     <div className="container md:flex items-center justify-center flex-col">
-      <div className="flex flex-col rounded-lg items-start gap-4 md:gap-6 bg-white p-10 shadow-sm border border-muted">
+      <div className="flex flex-col rounded-lg items-start gap-4 md:gap-6 bg-background p-10 shadow-sm border border-muted">
         <div className="text-start space-y-2">
           <h1 className="text-2xl font-bold md:text-3xl">
             {pathname === "/sign-up" ? "Welcome" : "Welcome back"}

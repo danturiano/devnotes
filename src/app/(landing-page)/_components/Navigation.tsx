@@ -1,5 +1,6 @@
 import Brand from "@/components/Brand";
 import { Button } from "@/components/Button";
+import { ModeToggle } from "@/components/mode-toogle";
 import Link from "next/link";
 import React from "react";
 
@@ -32,13 +33,16 @@ export default function Navigation({
           </div>
         </div>
         <div className="flex items-center sm:hidden">{children}</div>
-        <div className="hidden sm:block sm:space-x-3">
-          <Link href={"/sign-up"}>
-            <Button variant={"outline"}>Create Account</Button>
-          </Link>
-          <Link href={"/sign-in"}>
-            <Button>Sign in</Button>
-          </Link>
+        <div className="hidden sm:flex sm:items-center gap-4">
+          <div className="space-x-2">
+            <Link href={"/sign-up"}>
+              <Button>Create Account</Button>
+            </Link>
+            <Link href={"/sign-in"}>
+              <Button variant={"outline"}>Sign in</Button>
+            </Link>
+          </div>
+          <ModeToggle />
         </div>
       </nav>
     </header>
